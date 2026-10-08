@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZHONG CHENG Consulting · 众诚咨询</title>
+<meta name="description" content="ZHONG CHENG Consulting — группа компаний в Ташкенте: юридическое направление (адвокатская фирма и ООО) и финансы. Работаем на русском и китайском.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;700&family=Noto+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f7f4ee;--paper2:#efe9df;--ink:#1d1b18;--ink2:#4a453e;--ink3:#7b746a;--red:#c8161d;--red-d:#9b1c1c;--line:#ddd5c8;--card:#fffdf9;
+  --serif:"Noto Serif","Noto Serif SC",Georgia,serif;--sans:"Noto Sans","Noto Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+/* шапка */
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;min-height:68px}
+.bar img{height:30px;width:auto;display:block}
+nav{display:flex;gap:22px;margin-left:auto;font-size:14.5px}
+nav a{text-decoration:none;color:var(--ink2)}nav a:hover{color:var(--red)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px}
+.lang button{border:0;background:transparent;padding:5px 11px;cursor:pointer;color:var(--ink2);font:inherit}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid transparent;transition:background .15s,color .15s}
+.btn.red{background:var(--red);color:#fff}.btn.red:hover{background:var(--red-d)}
+.btn.line{border-color:var(--ink);color:var(--ink)}.btn.line:hover{background:var(--ink);color:var(--paper)}
+.btn.sm{padding:8px 15px;font-size:14px}
+/* первый экран */
+.hero{padding-block:88px 72px;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:600;margin:0 0 18px}
+h1{font:700 clamp(34px,5vw,56px)/1.12 var(--serif);margin:0 0 22px;text-wrap:balance;letter-spacing:-.01em}
+.lead{font-size:18.5px;color:var(--ink2);max-width:56ch;margin:0 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.seal{aspect-ratio:1;max-width:340px;width:100%;justify-self:end;border-radius:50%;border:1.5px solid var(--red);display:grid;place-items:center;position:relative;color:var(--red)}
+.seal::before{content:"";position:absolute;inset:14px;border-radius:50%;border:1px dashed color-mix(in srgb,var(--red) 55%,transparent)}
+.seal b{font:700 clamp(72px,10vw,118px)/1 "Noto Serif SC",serif;letter-spacing:.04em}
+.seal small{position:absolute;bottom:22%;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3)}
+/* разделы */
+section{padding-block:72px;border-top:1px solid var(--line)}
+h2{font:700 clamp(26px,3.4vw,36px)/1.2 var(--serif);margin:0 0 12px;text-wrap:balance}
+.sub{color:var(--ink2);max-width:62ch;margin:0 0 40px}
+.dirs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+.dir{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.dir .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+.dir h3{font:700 24px/1.25 var(--serif);margin:0}
+.dir .zh{font-family:"Noto Serif SC",serif;color:var(--red);font-size:15px;margin-top:-8px}
+.firms{display:grid;gap:10px;margin:4px 0}
+.firm{border-left:3px solid var(--red);padding:4px 0 4px 14px}
+.firm b{display:block;font-weight:600}
+.firm span{color:var(--ink3);font-size:14px}
+.prac{list-style:none;padding:0;margin:0;display:grid;gap:7px;font-size:15px;color:var(--ink2)}
+.prac li{padding-left:18px;position:relative}.prac li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1.5px;background:var(--red)}
+.dir .foot{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.soon{font-size:13.5px;color:var(--ink3)}
+.dir.muted{background:var(--paper2)}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.how div{min-width:0}
+.how b{display:block;font:700 19px/1.3 var(--serif);margin-bottom:8px}
+.how p{margin:0;color:var(--ink2);font-size:15.5px}
+.num{font:600 13px var(--sans);color:var(--red);letter-spacing:.1em;display:block;margin-bottom:10px}
+.portal{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;background:var(--ink);color:var(--paper);border-radius:16px;padding:40px}
+.portal h2{color:var(--paper)}.portal p{color:#cfc8bd;margin:0;max-width:60ch}
+.portal .btn.red{white-space:nowrap}
+.contacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.contacts div{min-width:0}
+.contacts dt{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.contacts dd{margin:0;font-size:17px;overflow-wrap:anywhere}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--ink3);font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+[hidden]{display:none!important}
+@media (max-width:860px){
+  nav{display:none}
+  .hero{grid-template-columns:1fr;padding-block:56px 48px;gap:36px}
+  .seal{justify-self:start;max-width:220px}
+  .dirs,.how,.contacts{grid-template-columns:1fr}
+  .portal{grid-template-columns:1fr;padding:28px}
+  section{padding-block:52px}
+}
+@media (max-width:480px){.bar .btn.sm{display:none}.bar img{height:26px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a href="#top" aria-label="ZHONG CHENG"><img src="logo.png" alt="众诚 ZHONG CHENG" width="112" height="30"></a>
+    <nav>
+      <a href="#directions" data-t="nav_dirs">Направления</a>
+      <a href="#how" data-t="nav_how">Как мы работаем</a>
+      <a href="#contacts" data-t="nav_contacts">Контакты</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Язык / 语言">
+      <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </div>
+    <a class="btn red sm" href="https://legal.zhongcheng.uz" data-t="login">Вход в портал</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow">ZHONG CHENG Consulting · 众诚咨询</p>
+      <h1 data-t="h1">Право и финансы для бизнеса между Китаем и Узбекистаном</h1>
+      <p class="lead" data-t="lead">Группа компаний ZHONG CHENG в Ташкенте. Юридическое направление — адвокатская фирма и юридическая компания; финансовое направление — бухгалтерия и сопровождение. Работаем на русском и китайском языках.</p>
+      <div class="cta">
+        <a class="btn red" href="#directions" data-t="cta1">Наши направления</a>
+        <a class="btn line" href="https://legal.zhongcheng.uz" data-t="cta2">Портал юридической фирмы</a>
+      </div>
+    </div>
+    <div class="seal" aria-hidden="true"><b>众诚</b><small>Zhong Cheng</small></div>
+  </div>
+
+  <section id="directions">
+    <div class="wrap">
+      <h2 data-t="dirs_h">Направления группы</h2>
+      <p class="sub" data-t="dirs_sub">У каждого направления — свои компании и свои специалисты. Клиент обращается в одно место, а дальше его дело ведёт нужная команда.</p>
+      <div class="dirs">
+        <article class="dir">
+          <span class="tag" data-t="d1_tag">Юридическое направление</span>
+          <h3 data-t="d1_h">ZHONG CHENG Legal</h3>
+          <div class="zh">众诚法律</div>
+          <div class="firms">
+            <div class="firm"><b>ZHONG CHENG LEGAL</b><span data-t="f1">адвокатская фирма · 众诚律师事务所 — защита в суде, уголовные и административные дела</span></div>
+            <div class="firm"><b>ZHONG CHENG LAW FIRM</b><span data-t="f2">ООО · 众诚法律有限责任公司 — консультации, регистрация, лицензии, сопровождение бизнеса</span></div>
+          </div>
+          <ul class="prac">
+            <li data-t="p1">Лицензирование и строительство</li>
+            <li data-t="p2">Абонентское юридическое обслуживание компаний</li>
+            <li data-t="p3">Уголовные и административные дела</li>
+            <li data-t="p4">Гражданские и экономические споры</li>
+          </ul>
+          <div class="foot">
+            <a class="btn red sm" href="https://legal.zhongcheng.uz" data-t="d1_btn">Портал юридической фирмы →</a>
+            <span class="soon">legal.zhongcheng.uz</span>
+          </div>
+        </article>
+        <article class="dir muted">
+          <span class="tag" data-t="d2_tag">Финансовое направление</span>
+          <h3 data-t="d2_h">ZHONG CHENG Финансы</h3>
+          <div class="zh">众诚财务</div>
+          <p style="margin:0;color:var(--ink2)" data-t="d2_p">Бухгалтерский учёт и налоговая отчётность, сопровождение компаний с китайским капиталом, расчёт зарплаты и кадровый учёт.</p>
+          <div class="foot"><span class="soon" data-t="d2_soon">Сайт и кабинет направления — скоро</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2 data-t="how_h">Как мы работаем</h2>
+      <p class="sub" data-t="how_sub">Каждое дело — в защищённом портале фирмы: клиент видит этапы, документы и сообщения по своему делу.</p>
+      <div class="how">
+        <div><span class="num">01</span><b data-t="h1b">Два языка</b><p data-t="h1p">Юристы и переводчики ведут дело на русском и китайском: договоры, переписка и отчёты — на языке клиента.</p></div>
+        <div><span class="num">02</span><b data-t="h2b">Кабинет клиента</b><p data-t="h2p">Этапы работы, опубликованные документы, счета и сообщения юристу — в одном месте, по личному доступу.</p></div>
+        <div><span class="num">03</span><b data-t="h3b">Адвокатская тайна</b><p data-t="h3p">Доступ к делу есть только у команды, которая его ведёт. Права проверяет сервер, а не браузер.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="portal">
+        <div>
+          <h2 data-t="pt_h">Портал юридической фирмы</h2>
+          <p data-t="pt_p">Для сотрудников и клиентов ZHONG CHENG Legal. Доступ выдаёт фирма: логин и пароль — у вашего юриста.</p>
+        </div>
+        <a class="btn red" href="https://legal.zhongcheng.uz" data-t="pt_btn">Войти →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap">
+      <h2 data-t="ct_h">Контакты</h2>
+      <dl class="contacts">
+        <div><dt data-t="ct_city">Город</dt><dd data-t="ct_city_v">Ташкент, Узбекистан</dd></div>
+        <div><dt data-t="ct_phone">Телефон</dt><dd data-contact="phone">—</dd></div>
+        <div><dt data-t="ct_mail">Почта</dt><dd data-contact="mail">—</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> ZHONG CHENG Consulting · 众诚咨询</span>
+    <a href="https://legal.zhongcheng.uz">legal.zhongcheng.uz</a>
+  </div>
+</footer>
+
+<script>
+const ZH={nav_dirs:"业务方向",nav_how:"工作方式",nav_contacts:"联系方式",login:"登录门户",
+ h1:"服务于中乌之间商业的法律与财务",
+ lead:"众诚集团位于塔什干。法律方向——律师事务所和法律公司；财务方向——会计与企业服务。我们使用俄语和中文工作。",
+ cta1:"我们的业务",cta2:"律所门户",
+ dirs_h:"集团业务方向",dirs_sub:"每个方向都有自己的公司和专业团队。客户只需联系一处，由相应团队负责其事务。",
+ d1_tag:"法律方向",d1_h:"众诚法律",f1:"律师事务所 · ZHONG CHENG LEGAL——出庭辩护、刑事与行政案件",f2:"有限责任公司 · ZHONG CHENG LAW FIRM——咨询、注册、许可、企业法律服务",
+ p1:"许可与建设",p2:"企业常年法律顾问",p3:"刑事与行政案件",p4:"民事与经济纠纷",d1_btn:"律所门户 →",
+ d2_tag:"财务方向",d2_h:"众诚财务",d2_p:"会计核算与税务申报、中资企业服务、工资核算与人事记录。",d2_soon:"该方向的网站和客户中心即将上线",
+ how_h:"工作方式",how_sub:"每个案件都在律所的安全门户中办理：客户可查看自己案件的进度、文件和消息。",
+ h1b:"双语服务",h1p:"律师和翻译以俄语和中文办理案件：合同、往来函件和报告均使用客户的语言。",
+ h2b:"客户中心",h2p:"工作进度、已发布文件、账单以及与律师的消息——凭个人账号集中查看。",
+ h3b:"律师保密",h3p:"只有负责该案件的团队可以访问。权限由服务器核验，而非浏览器。",
+ pt_h:"律所门户",pt_p:"供众诚法律的员工和客户使用。账号由律所发放：登录名和密码请向您的律师索取。",pt_btn:"登录 →",
+ ct_h:"联系方式",ct_city:"城市",ct_city_v:"乌兹别克斯坦 塔什干",ct_phone:"电话",ct_mail:"邮箱"};
+const RU={};document.querySelectorAll("[data-t]").forEach(el=>RU[el.dataset.t]=el.textContent);
+function setLang(l){const D=l==="zh"?ZH:RU;document.documentElement.lang=l==="zh"?"zh-CN":"ru";
+  document.querySelectorAll("[data-t]").forEach(el=>{const v=D[el.dataset.t];if(v)el.textContent=v;});
+  document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===l)));
+  try{localStorage.setItem("zc_site_lang",l);}catch(e){}}
+document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+let saved=null;try{saved=localStorage.getItem("zc_site_lang");}catch(e){}
+setLang(saved||(/^zh/i.test(navigator.language||"")?"zh":"ru"));
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
